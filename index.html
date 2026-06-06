@@ -1,81 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+    
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+
+    <style>
+        /* SOCIAL ICONS FIXOS NA TELA */
+        .social-icons {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .social-icons a {
+            position: absolute;
+            color: white;
+            font-size: 22px;
+            pointer-events: auto;
+        }
+
+        /* POSIÇÕES */
+        .social-icons a:nth-child(1) { /* EMAIL - topo */
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .social-icons a:nth-child(2) { /* GITHUB - direita */
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        .social-icons a:nth-child(3) { /* DISCORD - baixo */
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .social-icons a:nth-child(4) { /* INSTAGRAM - esquerda */
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Navegação -->
-    <nav class="navbar">
-        <div class="container">
-            <h1 class="logo">Meu Portfólio</h1>
-            <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <a href="#" class="logo">Amine</a>
 
-    <!-- Seção Inicial -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Olá! Bem-vindo ao meu Portfólio</h1>
-            <p>Desenvolvedor Full Stack apaixonado por criar soluções incríveis</p>
-            <button class="btn">Saiba Mais</button>
-        </div>
-    </section>
+        <nav>
+            <a href="Home" class="active">Home</a>
+            <a href="Projects">Projects</a>
+        </nav>
+    </header>
 
-    <!-- Seção Sobre -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <h2>Sobre Mim</h2>
-            <p>Sou um desenvolvedor dedicado com experiência em front-end e back-end. Tenho paixão por aprender novas tecnologias e criar experiências de usuário incríveis.</p>
+    <section class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="">
+        </div>
+
+        <div class="home-content">
+            <h1>Hi, It's <span>Amine</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+
+            <p>
+                Developer with experience in HTML, CSS, JavaScript, and Python, 
+                working as a Front-End Developer, UI/UX Designer, Graphic Designer, 
+                and Web Developer, focused on building modern, efficient, and 
+                well-structured web solutions.
+            </p>
         </div>
     </section>
 
-    <!-- Seção Projetos -->
-    <section id="projetos" class="projects">
-        <div class="container">
-            <h2>Meus Projetos</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Projeto 1</h3>
-                    <p>Descrição do projeto 1</p>
-                </div>
-                <div class="project-card">
-                    <h3>Projeto 2</h3>
-                    <p>Descrição do projeto 2</p>
-                </div>
-                <div class="project-card">
-                    <h3>Projeto 3</h3>
-                    <p>Descrição do projeto 3</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- SOCIAL ICONS -->
+    <div class="social-icons">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amine.vrlx@gmail.com" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
 
-    <!-- Seção Contato -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu Email" required>
-                <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-                <button type="submit" class="btn">Enviar</button>
-            </form>
-        </div>
-    </section>
+        <a href="https://github.com/aminevrlx-dev" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2024 Meu Portfólio. Todos os direitos reservados.</p>
-    </footer>
+        <a href="https://discord.gg/UEDTnDYUQX" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+        </a>
 
-    <script src="script.js"></script>
+        <a href="https://instagram.com/amine_vrlx" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
+
 </body>
 </html>
